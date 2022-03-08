@@ -1,5 +1,5 @@
 import os
-print("Don't forget to follow me on my telegram channel @VnVn6")
+print("Don't forget to follow me on my telegram channel @ZetTekno")
 print("∞"*60)
 os.system('pip install requests')
 os.system('pip install pyfiglet')
