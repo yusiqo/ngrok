@@ -1,0 +1,165 @@
+import os
+import requests
+import random,uuid,time,secrets
+from uuid import uuid4
+import sys
+import marshal
+import base64
+import zlib
+
+os.system("clear")
+kirmizi="\033[1;31m"
+yeşil="\033[1;32m"
+beyaz="\033[0m"
+
+#Link Ve Şifreler
+linkler=("https://ay.live/QKvWEK","https://ay.live/yjas","https://ay.live/fdx530","https://ay.live/Edey")
+link = str(''.join((random.choice(linkler) for i in range(1))))
+if link == "https://ay.live/Edey":
+    lisans="KarderBoşŞeydir"
+if link == "https://ay.live/fdx530":
+    lisans="YallahBismillah"
+if link == "https://ay.live/WUSC4":
+    lisans="CodedYusiqo"
+if link == "https://ay.live/yjas":
+    lisans="MüqTool"
+if link == "https://ay.live/QKvWEK":
+    lisans="ZetTekno Kraldır"
+def clear():
+    os.system("clear")
+#banner
+def banner():
+    x=("""\033[1;31;40m
+    _______________________________________
+
+              ______________
+        ,===:'.,            `-._
+             `:.`---.__         `-._
+            `:.     `--.         `.
+                 \.        `.         `.
+         (,,(,    \.         `.   ____,-`.,
+      (,'     `/   \.   ,--.___`.'
+  ,  ,'  ,--.  `,   \.;'         `
+   `{D, {    \  :    \;
+     V,,'    /  /    //
+     j;;    /  ,' ,-//.    ,---.      ,
+     \;'   /  ,' /  _  \  /  _  \   ,'/
+           \   `'  / \  `'  / \  `.' /
+            `.___,'   `.__,'   `.__,'
+
+    _______________________________________
+    \033[0m
+    
+    Coded By: @Yusiqo
+    Channel: @ZetTekno
+    Kader Sadece Bahanedir.....
+    \033[1;31;40m    _______________________________________\033[0m """)
+    for zettekno in x.splitlines():
+        time.sleep(0.02)
+        print(zettekno)
+        
+#şifrelem Aşaması (Bebe, orta seviye)
+def bebe():
+    clear()
+    banner()
+    dosya1=input("Dosya İsmi Gir: ")
+    hak=dosya1
+    adet=27
+    if adet == 0:
+        adet=2
+    if adet == 1:
+        adet=2
+    dosya=dosya1.replace(".py", "-Zet-Enc.py")
+    k=open(hak, 'r').read()
+    he=open(dosya, 'w').write(k)
+    for i in range(adet):
+        dosya2=open(dosya, 'r')
+        e=dosya2.read()
+        sif= base64.b64encode(e.encode("utf-8"))
+        siff=str(sif, "utf-8")
+        a2= repr(siff)
+        out= open(dosya, 'w')
+        qj=("""#Coder Yusiqo\n#Plz Dont Delete\nimport base64\nexec(base64.b64decode(""" + a2 + "))")
+        out.write(qj)
+
+#hash Kırıcı
+def coz():
+    clear()
+    banner()
+    base641=input("Base64 Hashı Giriniz: ")
+    t=str(base64.b64decode(base641).decode("utf-8"))
+    clear()
+    banner()
+    print(t)
+
+#Şifreleme Aşaması (basit)
+def basit():
+    clear()
+    banner()
+    dosya1=input("Dosya İsmi Gir: ")
+    hak=dosya1
+    adet=int(input("Kaç Defa Şifrelensin: "))
+    if adet == 0:
+        adet=2
+    if adet == 1:
+        adet=2
+    dosya=dosya1.replace(".py", "-Zet-Enc.py")
+    k=open(hak, 'r').read()
+    he=open(dosya, 'w').write(k)
+    for i in range(adet):
+        dosya2=open(dosya, 'r')
+        e=dosya2.read()
+        sif= base64.b64encode(e.encode("utf-8"))
+        siff=str(sif, "utf-8")
+        a2= repr(siff)
+        out= open(dosya, 'w')
+        qj=("""#Coder Yusiqo\n#Plz Dont Delete\nimport base64\nexec(base64.b64decode(""" + a2 + "))")
+        out.write(qj)
+
+
+#Şifreleme Seçimi
+def sifrele():
+    clear()
+    banner()
+    print("\n1) Base64 (basit)\n2) Oto Şifreleme (Normal insan kırmayla uğraşmaz) \n")
+    seç=input("Method Seçiniz: ")
+    if seç == "1":
+        basit()
+    if seç == "2":
+        bebe()
+
+#Ana Tool
+def startss():
+    clear()
+    banner()
+    print("\n1) Şifele\n2) Hash Kır (basit base64)\n")
+    seç=input("Method Seçiniz: ")
+    if seç == "1":
+        sifrele()
+    if seç == "2":
+        coz()
+
+#Lisans Kontrolu
+try:
+    f = open("key","r")
+except:
+    f = open("key","w")
+f = open("key","r")
+anahtar=(f.read())
+if anahtar == "Lisans= Active":
+    startss()
+else:
+    clear()
+    banner()
+    keys= link
+    print(f"Lisans Linki: {keys}")
+    keyim=input("Giriş Kodunu Giriniz : ")
+    if keyim == lisans:
+        f = open("key", "w")
+        f.write("Lisans= Active")
+        f.close()
+        startss()
+    else:
+        clear()
+        print("Lisans Kodu Yanlış")
+        quit()
