@@ -1,12 +1,10 @@
 import os
 import requests
+from user_agent import *
 import random,uuid,time,secrets
 from uuid import uuid4
 import sys
 import threading
-from random_user_agent.user_agent import UserAgent
-from random_user_agent.params import SoftwareName, OperatingSystem 
-
 os.system("clear")
 kirmizi="\033[1;31m"
 yeşil="\033[1;32m"
@@ -76,7 +74,6 @@ def startss():
         olu=0
         hit=0
         while True:
-            useradent = user_agent_rotator.get_random_user_agent()
             N = "09876543221"
             R = ''.join(random.choice(N)for t in range(7))
             user = '98913'+R
@@ -93,7 +90,7 @@ def startss():
                 'sec-ch-ua':'" Not A;Brand";v="99", "Chromium";v="98", "Google Chrome";v="98"',
                 'sec-ch-ua-mobile':'?0',
                 'x-asbd-id':'198387',
-                'user-agent': useradent,
+                'user-agent': generate_user_agent(),
                 'x-csrftoken':'h61zrEGl5Ap1QWAUT1KhkQ9aX4OUAzIr',
                 'x-ig-app-id':'936619743392459',
                 'x-ig-www-claim':'0',
